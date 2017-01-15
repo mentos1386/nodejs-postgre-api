@@ -1,0 +1,49 @@
+{
+  "name": "mongodb-postgres-nodejs",
+  "version": "1.0.0",
+  "description": "Starting bolerplate for nodejs/mongodb/postgress projects. Postgres as main DB",
+  "engines": {
+    "node": "7.2.0",
+    "npm": "3.10.9"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "create-resource": "node ./scripts/createResource",
+    "seed-local": "DEV=local node ./seed",
+    "seed": "node ./seed",
+    "dev": "NODE_ENV=development supervisor run",
+    "dev-local": "NODE_ENV=development DEV=local supervisor run",
+    "production": "pm2 restart my-project || NODE_ENV=production pm2 start run.js --name=\"my-project \"",
+    "staging": "pm2 restart my-project || NODE_ENV=staging pm2 start run.js --name=\"my-project \""
+  },
+  "author": "Tine Jozelj <mentos1386@tjo.space>",
+  "license": "MIT",
+  "dependencies": {
+    "argon2": "^0.15.0",
+    "bluebird": "^3.4.6",
+    "body-parser": "^1.15.2",
+    "cors": "^2.7.1",
+    "cron": "^1.1.0",
+    "ejs": "^2.5.5",
+    "express": "^4.14.0",
+    "faker": "^3.1.0",
+    "lodash": "^4.13.1",
+    "mailin-api-node-js": "^1.0.0",
+    "mongoose": "^4.5.3",
+    "node-cron": "^1.1.1",
+    "pg": "^6.1.2",
+    "pg-hstore": "^2.3.2",
+    "rand-token": "^0.2.1",
+    "require-all": "^2.0.0",
+    "sequelize": "^3.28.0",
+    "url-pattern": "^1.0.1",
+    "validator": "^6.2.0",
+    "winston": "^2.3.0",
+    "winston-daily-rotate-file": "^1.4.0"
+  },
+  "devDependencies": {
+    "ncp": "^2.0.0",
+    "replace": "^0.3.0"
+  }
+}
